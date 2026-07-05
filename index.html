@@ -7,37 +7,29 @@
 
   <body style="color: darkslategrey;background-color: cadetblue; background-image: url(./river.gif); background-size: cover; height: 100vh;">
 
-      <div class="window" id="welcome" style="background-color: whitesmoke; border: 4mm solid aqua; border-radius: 20px; padding: 14px; width: fit-content; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="window" id="welcome" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
 
-          <p style="display: flex; justify-content: end; align-items: start;">
-            <a class="closebutton" id="welcomeclose">✖</a>
-            <!--<a class="headerbutton" id = "welcomeheader" style="padding-right: 10px;">■</a> -->
-          </p>
+    <!--<div style="display: flex; justify-content: end;">
+            <div class="closebutton" id="welcomeclose">✖</div>
+            <div class="headerbutton" id = "welcomeheader">■</div>
+        </div>-->
 
-          <h1 style="color:black">Welcome to LaupiOS!</h1>
-          <p>The calmer Site.<br>
-          I am a German boy who loves Backfisch(a northern German dish)<br>
-        and mountains.<br>
-            My favorite song is <a href="https://youtu.be/gTMWO7ovAXk?si=yUcn8OkukymiHDyA">Chandelier by Will Paquin</a> <br>
-            I mostly programm games.</p>
-
-            <img src="./Backfisch.jpg" style="width: 9cm; border-radius: 10px;">
-        <p>This is a Backfisch I photographed! <br>(It was'nt very tasty tbh) </p>
-
-        <img src="./Backfisch1.jpg" style="width: 9cm; border-radius: 10px;">
-        <p>But that one was tasty!</p>
-
-        <img src="./Berge.jpg" style="width: 9cm; border-radius: 10px;">
-        <p>And here are mountains I photographed.<br><br>That was everything. Bye!</p>
-
-        <img src="cat.gif" style="width: 400px; height: 64px;">
-      </div>
+        <div class="headerbutton" id = "welcomeheader" style="display: flex; width: 100%; padding-bottom: 3px;">
+            <div class="closebutton" id="welcomeclose" style="margin-right: 10px;">✖</div>
+            Welcome
+            </div>
+        <div style="margin: 6px; background-color: mediumseagreen; border-radius: 20px; padding: 5px;">
+            <h1 style="color:black">Welcome to LaupiOS!</h1>
+            <p>The site by Laupi_oida.</p>
+            </p>
+        </div>
+    </div>
 
       <!-- topbar -->
-      <div style="display: flex; justify-content: space-between; color: black; background-color: seagreen; border-radius: 15px; font-weight: bold; font-family: sans-serif; max-height: 25px; ">
+      <div id="top" style="display: flex; justify-content: space-between; color: black; background-color: seagreen; border-radius: 15px; font-weight: bold; font-family: sans-serif; max-height: 25px; ">
 
           <p style="margin-left: 15px; transform: translate(0,-15px)">
-                LaupiOS v 0.3
+                LaupiOS v 0.4
           </p>
 
           <p id="timeElement" style="transform: translate(0,-15px);">
@@ -58,16 +50,25 @@
 
       </div>
 
-      <!--Notes -->
-      <div class="window" id="notes" style="display: none;">
-         <div class="closebutton" id="notesclose">✖</div>
-          <div class="selected" style="">
-          <div>
+      <!--Notes-->
+    <div class="window" id="notes" style="display: none; width: fit-content; color: black;">
 
-      </div>
+        <div class="headerbutton" id = "notesheader" style="display: flex; width: 100%; padding-bottom: 3px;">
+            <div class="closebutton" id="notesclose" style="margin-right: 10px;">✖</div>
+            Nutnotes
+            </div>
 
-  </body>
+        <div style="background-color: mediumseagreen; margin: 6px; border-radius: 12px; width: 520px; height: 480px; padding: 16px; font-family: sans-serif; display: flex;">
 
-  <script src="script.js"></script>
+            <div id="notessidebar" style="cursor: pointer; background-color: springgreen; width: 720px; margin-right: 10px; padding: 16px; border-radius: 16px; width: fit-content;"></div>
+
+            <div id="notesContent" style="overflow-y: scroll;">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script src="script.js"></script>
 
 </html>

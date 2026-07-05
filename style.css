@@ -32,10 +32,11 @@
 }
 
 .window {
-    background-color: mediumseagreen;
-    border: solid seagreen 2mm;
+    background-color: seagreen;
+    /* border: solid seagreen 2mm; */
     border-radius: 20px;
     position: absolute;
     width: fit-content;
     padding: 10px;
+    font-family: sans-serif;
 }
