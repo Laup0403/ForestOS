@@ -341,7 +341,7 @@ function handlePromt(line) {
 
   switch (command) {
     case 'help':
-      printToTerminal('Available commands:<br> help, clear, echo, forestfetch, matrix<br>more infos available at <a href="https://github.com/Laup0403/LaupiOS">https://github.com/Laup0403/LaupiOS</a>');
+      printToTerminal('Available commands:<br> help, clear, echo, forestfetch, matrix,nutnotes,thincanphone,welcome,coolgame,whoIsTheBestProgrammer<br>more infos available at <a href="https://github.com/Laup0403/LaupiOS">https://github.com/Laup0403/LaupiOS</a>');
       break;
     case 'clear':
       outputScreen.innerHTML = '';
