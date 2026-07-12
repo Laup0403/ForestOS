@@ -371,8 +371,7 @@ function handlePromt(line) {
       printToTerminal(`bark: command not found: ${command}`);
   }
 };
-function love.draw()
-	love.graphics.printf("Hello World!", 0, 300, love.graphics.getWidth(), 'center')
+
 	love.graphics.printf(
 		string.format("Time: %f - FPS: %f\nOS: %s Ver: %d.%d.%d\nScreen: %d x %d",
 			love.timer.getTime(), love.timer.getFPS(),
