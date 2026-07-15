@@ -2,19 +2,24 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
-  color: black;
+  color: gray;
+  margin-right: 10px;
 }
 
 .headerbutton {
     width: 16px;
     height: 16px;
-    color: black;
+    color: gray;
     cursor: grab;
+    display: flex;
+    width: 100%;
+    padding-bottom: 3px;
+    font-family: sans-serif;
 }
 
 .desktopApps {
     padding: 7px 18px 7px 18px;
-    background-color: seagreen;
+    background-color: #1d2e28;
     border-radius: 20px;
     width: fit-content;
     position: absolute;
@@ -26,7 +31,8 @@
 }
 
 .window {
-    background-color: seagreen;
+    background-color: #1d2e28;
+    color: gray;
     /* border: solid seagreen 2mm; */
     border-radius: 20px;
     position: absolute;
@@ -35,10 +41,22 @@
     font-family: sans-serif;
 }
 
+.windowinhalt {
+    margin: 6px;
+    background-color: #518170;
+    border-radius: 20px;
+    padding: 5px;
+    color: black;
+}
+
 .numpad {
     background-color: mediumspringgreen;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 4px;
     margin-bottom: 10px;
+}
+
+.sidebarcontent {
+    padding-bottom: 10px;
 }

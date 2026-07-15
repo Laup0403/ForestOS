@@ -13,8 +13,9 @@ var biggestIndex = 1;
 var topBar = document.querySelector("#top")
 var selectedIcon = undefined
 var currentNumber = "‎ "
-var notescontent = [{
-  title: "Welcome",
+var notescontent = [
+  {
+  title: "What is this place?",
   date: "04.07.26",
   content: `
     <p contenteditable="True">
@@ -202,6 +203,7 @@ function addToSideBar(index) {
   var sidebar= document.querySelector("#notessidebar");
   var note = notescontent[index];
   newDiv = document.createElement("div");
+  newDiv.classList = "sidebarcontent";
   newDiv.innerHTML = `
     <p style="margin: 0px;">${note.title}</p>
     <p style="font-size: 12px; margin: 0px;">${note.date}</p>
