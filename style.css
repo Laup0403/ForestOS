@@ -6,6 +6,10 @@
   margin-right: 10px;
 }
 
+.closebutton:hover {
+    color: darkslategray;
+}
+
 .headerbutton {
     width: 16px;
     height: 16px;
@@ -59,4 +63,18 @@
 
 .sidebarcontent {
     padding-bottom: 10px;
+}
+
+.unsuspiciousbutton{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 100px;
+    border: solid 3px black;
+    margin-left: 6px;
+}
+
+.unsuspiciousbutton:hover{
+    background-color: #9f0000;
 }

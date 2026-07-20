@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
 
     <head>
       <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
 
-  <body id="body" style="color: gray;background-color: black; background-image: url(./photos/dark_forest.png); background-size: cover; height: 100vh;">
+  <body id="body" style="color: gray;background-color: black; background-image: url(./photos/dark_forest.png); background-size: cover; height: 100vh; overflow-y: hide;">
 
       <!-- topbar -->
       <div id="top" style="display: flex; justify-content: space-between; color: gray; background-color: #1d2e28;border-radius: 15px; font-weight: bold; font-family: sans-serif; max-height: 25px; ">
 
           <p style="margin-left: 15px; transform: translate(0,-15px)">
-                ForestOS v 1.2
+                ForestOS v 1.3
           </p>
 
           <p id="timeElement" style="transform: translate(0,-15px);">
@@ -25,17 +24,17 @@
       <!-- dock -->
       <div class="desktopApps" id="desktopApps" style="display: flex;">
 
-          <div id="notesIcon" style="padding-right: 10px;cursor: pointer; display: flex; align-items: start; justify-content: space-between; filter: grayscale();">
+          <div id="notesIcon" style="padding-right: 10px;cursor: pointer; display: none; align-items: start; justify-content: space-between; filter: grayscale();">
               <img src="./icons/Notes.png" style="width: 32px; height: 32px;">
-              <div class="selected" style="color: gray;"></div>
+                  <!--<div class="selected" style="color: gray;"></div>-->
           </div>
 
-          <div id="callsIcon" style="cursor: pointer; display: flex; align-items: start; justify-content: space-between; padding-right: 10px; filter: grayscale();">
+          <div id="callsIcon" style="cursor: pointer; display: none; align-items: start; justify-content: space-between; padding-right: 10px; filter: grayscale();">
               <img src="./icons/Callcenter.png" style="width: 32px; height: 32px;">
               <div class="selected" style="color: gray;"></div>
           </div>
 
-          <div id="termIcon" style="cursor: pointer; display: flex; align-items: start; justify-content: space-between; filter: grayscale();">
+          <div id="termIcon" style="cursor: pointer; display: none; align-items: start; justify-content: space-between; filter: grayscale();">
               <img src="./icons/Term.png" style="width: 32px; height: 32px;">
               <div class="selected" style="color: gray;"></div>
           </div>
@@ -49,10 +48,10 @@
               Nutnotes
               </div>
 
-          <div class="windowinhalt" style="width: 520px; height: 480px; padding: 16px; font-family: sans-serif; display: flex;">
-              <div id="notessidebar" style="cursor: pointer; background-color: #B7D2C8; width: 720px; margin-right: 10px; padding: 16px; border-radius: 16px; width: fit-content;"></div>
+          <div class="windowinhalt" style="width: 720px; height: 480px; padding: 16px; font-family: sans-serif; display: flex;">
+              <div id="notessidebar" style="cursor: pointer; background-color: #B7D2C8; width: 720px; margin-right: 10px; padding: 16px; border-radius: 16px; width: 150px;"></div>
 
-              <div id="notesContent" style="overflow-y: scroll;">
+              <div id="notesContent" style="overflow-y: scroll; font-size: 16px; width: 100%;">
               </div>
           </div>
     </div>
@@ -61,33 +60,35 @@
     <div class="window" id="welcome" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 720px; font-family: 'Times New Roman';">
 
         <div class="headerbutton" id = "welcomeheader">
-            <div class="close-button" id="welcomeclose">✖</div>
+            <div class="close-button" id="welcomeclose"></div>
             Welcome
             </div>
         <div class="windowinhalt" style="height: 500px; overflow-y: scroll;">
-            <div style="text-align: center; padding-top: 100px;">
+            <div style="text-align: center; padding-top: 70px;">
                 <h1 style="color:black; font-size: 90px;">Welcome in the Woods!</h1>
-                <p style="color: darkslategray;">| Scroll down for more Infos |</p>
+                <p style="color: #141414;">| Scroll down for more Infos |</p>
                 <p style="color:black; font-size: 25px;"> <br><br><br>
                     This is ForestOS,<br>
-                        the website with story<br>
+                        the operating system with story<br>
                     <small>by Laupi_oida</small> </p>
-                <h2 style="color:black; font-size: 25px;">Why ForestOS?</h2>
-                <p style="color:black; font-size: 25px;">I searched an idea and saw<br>
-                    a photo of a forest.<br>
-                    No crazy story<br>
+                <h2 style="color:black; font-size: 25px;">Important Infos:</h2>
+                <p style="color:black; font-size: 25px;">-This Story can be scary
+                    for someone<br> and the age, recommended by me, is 0+.<br>
+                        -if you find a bug please tell<br>it to me somerwhere idk<br>
                 </p>
-                <h2 style="color:black; font-size: 25px;">Important Info</h2>
-                <p style="color:black; font-size: 25px;">The infos on this Website are <br>
-                    completly from my knowledge<br>
-                    and if something isn't in your forest,<br>
-                    it's because you're not in my main forest.</p>
+                <h2 style="color:black; font-size: 25px;">Are you ready?</h2>
+                <p style="color:black; font-size: 25px;">then press this very unsuspicious button<br>and have fun!<br>
+                    <br>
+                </p>
+                <div style="display:flex; justify-content: space-around; padding-bottom: 30px;">
+                <div onclick='document.querySelector("#welcome").style.display = "none"; document.querySelector("#notesIcon").style.display = "flex"' class="unsuspiciousbutton"></div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Phone -->
-    <div class="window" id="calls" style="display: none; width: fit-content;">
+    <div class="window" id="calls" style="top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; width: fit-content;">
 
         <div class="headerbutton" id = "callsheader">
             <div class="closebutton" id="callsclose">✖</div>
@@ -173,12 +174,12 @@
     </div>
 
     <!--John Pork -->
-    <div id="johnpork" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #000000; z-index: 99999; display: none; justify-content: center; align-items: center;">
+    <div id="johnpork" style="top: 50%; left: 50%; transform: translate(-50%, -50%); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #000000; z-index: 99999; display: none; justify-content: center; align-items: center;">
         <video id="johnporkVideo" src="./audio/johnny.mp4" style="height: 1000px;"></video>
     </div>
 
     <!-- Terminal -->
-    <div id="term" class="window" style="width: 600px; display: none;">
+    <div id="term" class="window" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; display: none;">
         <div class="headerbutton" id = "termheader" >
             <div class="close-button" id="termclose" >✖</div>
            ForestBreaker
@@ -195,6 +196,10 @@
 
 </body>
 
-    <script src="script.js"></script>
+    <script src="scripts/windows.js"></script>
+    <script src="scripts/notes.js"></script>
+    <script src="scripts/calls.js"></script>
+    <script src="scripts/term.js"></script>
+    <script src="scripts/uhr.js"></script>
 
 </html>
